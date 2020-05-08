@@ -10,7 +10,9 @@ export class AppComponent {
   title = 'rocket-link-ng';
 
   constructor(private http: HttpClient) {
-    this.http.get<any>('http://localhost:4200/api/hi').subscribe(res => {
+    const baseURL = window.location.protocol + '//' + window.location.host;
+    let usableUrl = baseURL.includes('localhost') ? baseURL+':4200' : baseURL;
+    this.http.get<any>(baseURL+ '/api/hi').subscribe(res => {
       console.log(res);
     });
   }
