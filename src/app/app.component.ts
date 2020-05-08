@@ -13,7 +13,7 @@ export class AppComponent {
     const baseURL = window.location.protocol + '//' + window.location.host;
     let usableUrl = baseURL.includes('localhost') ? baseURL+':4200' : baseURL;
     this.http.get<any>(baseURL+ '/api/hi').subscribe(res => {
-      console.log(res);
+      console.log(res.hi);
     });
   }
 }
