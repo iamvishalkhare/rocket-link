@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
   });
 
 app.get('/api/hi', function (req, res) {
-    res.send('Hello World! from Vishal');
+    res.send({hi : 'Hello World! from Vishal'});
 });
 
 app.listen(process.env.PORT || 8000, () => {
