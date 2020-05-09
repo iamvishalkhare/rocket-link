@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LanderComponent } from './lander/lander.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LanderComponent
   ],
   imports: [
     BrowserModule,
