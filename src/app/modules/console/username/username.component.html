@@ -1,0 +1,6 @@
+<div *ngIf="this.onload.user$ | async; let user">
+    <h3>Hi {{user.displayName}}</h3>
+    What's your username?
+    <input type="text" [(ngModel)]="username">
+    <button (click)="print()">submit</button>
+</div>

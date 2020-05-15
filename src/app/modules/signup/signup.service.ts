@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from './user';
+import { User } from '../../user';
 
 import * as firebase from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -22,7 +22,6 @@ export class SignupService {
     this.onloadService.user$ = this.afAuth.authState;
     this.onloadService.user$.subscribe(user => {
       if (user) {
-        console.log(user);
         this.router.navigate(['console']);
       }
     });
