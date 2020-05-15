@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { OnloadService } from './onload.service';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rocket-link-ng';
 
-  constructor(private http: HttpClient, private router: Router) {
-    const baseURL = window.location.protocol + '//' + window.location.host;
-    let usableUrl = baseURL.includes('localhost') ? baseURL+':4200' : baseURL;
-    // this.http.get<any>(baseURL+ '/api/hi').subscribe(res => {
-    //   console.log(res.hi);
-    // });
-  }
+  constructor(private onloadService: OnloadService, private router: Router) { }
 
   ngOnInit(): void {
     this.router.navigate(['lander']);
   }
 
-  
 }

@@ -1,0 +1,12 @@
+<div class="form-container">
+    <div class="card-info">
+        <mat-card>
+            <img src="assets/images/lock.svg" id="lock">
+
+            <span class="error" *ngIf="error">{{ error }}</span>
+
+            <button class="social-button" id="facebook-connect" (click)="auth.facebookSignIn()"><i class="fab fa-facebook-f social-icon-font-size"></i>  &nbsp;&nbsp;&nbsp;&nbsp; Login With Facebook</button><br>
+            <button class="social-button" id="google-connect" (click)="auth.googleSignin()"><i class="fab fa-google social-icon-font-size"></i> &nbsp;&nbsp;&nbsp;&nbsp; Login With Google</button>
+        </mat-card>
+    </div>
+</div>
